@@ -1,3 +1,5 @@
+###Big data
+
 #À partir de ce array, code un programme ruby qui répondra aux questions suivantes :
 
     #1 - Combien y a-t-il de journalistes dans ce array ? 
@@ -114,6 +116,7 @@ def menuPositionArray(handleTwitter)
 	puts ""
 end
 
+#Message de bienvenue
 def welcomeMessage
 	puts "#Bienvenue dans la Data Scientist - Big Data !"
 	puts ""
