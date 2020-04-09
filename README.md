@@ -1,9 +1,11 @@
 # Data_Sientist
 
-###Projet : Data scientist
+### Projet : Data scientist
 
-```Data_Sientist
+```
+Data_Sientist
 ├── lib
 │   ├── 00_journalists.rb
 │   └── 01_cryptocurrencies.rb
-└── README.md```
+└── README.md
+```
