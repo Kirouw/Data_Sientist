@@ -58,7 +58,7 @@ def cryptoContainCoin(my_hash)
 
 	my_hash.each do |key, value|
 		my_hashdown = key.downcase #Permet de mettre tout les clés du hash en miniscule
-		if my_hashdown.include? 'coin'	#?include permet de chercher dans my_hashdown les mots qui inclu "coin"
+		if my_hashdown.include? 'coin'	#include? permet de chercher dans my_hashdown les mots qui inclu "coin"
 			result << my_hashdown #stock le resultat dans un tableau
 		end
 	end

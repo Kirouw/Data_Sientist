@@ -41,7 +41,7 @@ end
 def menuAudeArraySize(handleTwitter)
 
 	handleTwitter = handleTwitter.map(&:downcase)
-	result = handleTwitter.grep(/aude/).size
+	result = handleTwitter.grep(/aude/).size #Créer un nouveau tableau avec les caratères 'aude' et compte la taille du tableau
 
 	puts ""
 	puts "Il y a #{result} journalistes avec les 4 lettres du prénom 'Aude' à la suite dans leurs pseudonyme"
@@ -52,7 +52,7 @@ end
 #4 - Affiche le nombre de journalistes qui commencent par une majuscule
 def menuUpcaseArraySize(handleTwitter)
 
-	result = handleTwitter.grep(/^@[A-Z]/).size
+	result = handleTwitter.grep(/^@[A-Z]/).size #Mesure la taille du tableau, grep va créer un nouveau tableau avec le regex ^@[A-Z] ^ permet de commencer au début au début du mot, puis @ pour l'arobase du array et ensuite tout les caractères entre A et Z grace au regex
 
 	puts ""
 	puts "Il y a #{result} journalistes avec un pseudonyme qui commence par une majuscule"
@@ -63,7 +63,7 @@ end
 #5 - Affiche le nombre de journalistes avec au moins une majuscule
 def menuOneUpcaseArraySize(handleTwitter)
 
-	result = handleTwitter.grep(/[A-Z]/).size
+	result = handleTwitter.grep(/[A-Z]/).size #Mesure la taille du tableau, grep va créer un nouveau tableau avec le regex > [A-Z], il va chercher tout les caractères entre A et Z
 
 	puts ""
 	puts "Il y a #{result} journalistes avec au moins une majuscule dans leurs pseudonyme"
@@ -74,7 +74,7 @@ end
 #6 - Affiche le nombre d'underscore _ dans tous les pseudos confondus
 def menuUnderscoreArraySize(handleTwitter)
 
-	result = handleTwitter.join('').count('_')
+	result = handleTwitter.join('').count('_') #convertit le tableau handleTwitter en string et compte le nombre de _
 	
 	puts ""
 	puts "Il y a #{result} journalistes avec un underscore _ dans leurs pseudonyme"
@@ -85,10 +85,10 @@ end
 #7 - Affiche les noms des journalistes par ordre alphabétique
 def menuAlphabetArray(handleTwitter)
 
-	result = handleTwitter.sort_by { |x| x.downcase }
+	result = handleTwitter.sort_by! { |x| x.downcase } #Permet de trier par ordre alphabétique grace à sort_by! le x.downcase va permettre de passer les journalistes en miniscule afin de trier entierement la liste (Si on utilise .sort la tableau est trier par ordre alphabtiqué mais fait une différentre majuscule et miniscule)
 
 	puts ""
-	puts result
+	puts handleTwitter
 	puts "----------"
 	puts ""
 end
@@ -96,8 +96,8 @@ end
 #8 - Affiche les 50 handles les plus courts de ce array
 def menuFiftyFirstArray(handleTwitter)
 
-	handleTwitter = handleTwitter.sort_by(&:length)
-	result = handleTwitter.slice(0, 50)
+	handleTwitter = handleTwitter.sort_by(&:length) #Range le tableau handleTwitter par largeur
+	result = handleTwitter.slice(0, 50) #Decoupe le tableau et prendre les 50 premier entrée du tableau handleTwitter grace à slice() 
 
 	puts ""
 	puts result
@@ -108,7 +108,7 @@ end
 #9 - Affiche la position dans l'array de la personne @epenser
 def menuPositionArray(handleTwitter)
 
-	result = handleTwitter.index("@epenser")
+	result = handleTwitter.index("@epenser") #recherche l'entrée "@epenser" dans le tableau grace à '.index'
 
 	puts ""
 	puts "@epenser est à la #{result} ème position dans le tableau"
