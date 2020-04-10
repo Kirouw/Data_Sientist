@@ -88,7 +88,7 @@ def menuAlphabetArray(handleTwitter)
 	result = handleTwitter.sort_by! { |x| x.downcase } #Permet de trier par ordre alphabétique grace à sort_by! le x.downcase va permettre de passer les journalistes en miniscule afin de trier entierement la liste (Si on utilise .sort la tableau est trier par ordre alphabtiqué mais fait une différentre majuscule et miniscule)
 
 	puts ""
-	puts result
+	puts result7
 	puts "----------"
 	puts ""
 end
